@@ -1,0 +1,16 @@
+C:\Users\Guven\source\repos\Csharp9\Csharp9\bin\Debug\net5.0\Csharp9.exe
+C:\Users\Guven\source\repos\Csharp9\Csharp9\bin\Debug\net5.0\Csharp9.deps.json
+C:\Users\Guven\source\repos\Csharp9\Csharp9\bin\Debug\net5.0\Csharp9.runtimeconfig.json
+C:\Users\Guven\source\repos\Csharp9\Csharp9\bin\Debug\net5.0\Csharp9.runtimeconfig.dev.json
+C:\Users\Guven\source\repos\Csharp9\Csharp9\bin\Debug\net5.0\Csharp9.dll
+C:\Users\Guven\source\repos\Csharp9\Csharp9\bin\Debug\net5.0\ref\Csharp9.dll
+C:\Users\Guven\source\repos\Csharp9\Csharp9\bin\Debug\net5.0\Csharp9.pdb
+C:\Users\Guven\source\repos\Csharp9\Csharp9\obj\Debug\net5.0\Csharp9.csprojAssemblyReference.cache
+C:\Users\Guven\source\repos\Csharp9\Csharp9\obj\Debug\net5.0\Csharp9.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Guven\source\repos\Csharp9\Csharp9\obj\Debug\net5.0\Csharp9.AssemblyInfoInputs.cache
+C:\Users\Guven\source\repos\Csharp9\Csharp9\obj\Debug\net5.0\Csharp9.AssemblyInfo.cs
+C:\Users\Guven\source\repos\Csharp9\Csharp9\obj\Debug\net5.0\Csharp9.csproj.CoreCompileInputs.cache
+C:\Users\Guven\source\repos\Csharp9\Csharp9\obj\Debug\net5.0\Csharp9.dll
+C:\Users\Guven\source\repos\Csharp9\Csharp9\obj\Debug\net5.0\ref\Csharp9.dll
+C:\Users\Guven\source\repos\Csharp9\Csharp9\obj\Debug\net5.0\Csharp9.pdb
+C:\Users\Guven\source\repos\Csharp9\Csharp9\obj\Debug\net5.0\Csharp9.genruntimeconfig.cache
