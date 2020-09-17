@@ -12,14 +12,15 @@ namespace Csharp9
                 LastName = "kurt"
             };
 
-            var newp = p;
-            newp.FirstName = "hasan";
+            var newp = p with { };
+            newp.FirstName = "changed";
 
-            var product = new Product("Hah", 4);
+            var product = new Product("Phone", 14);
 
             var (name, lastname) = p;
 
-            Console.WriteLine(name + lastname);
+            Console.WriteLine($"{name} {lastname}");
+            Console.WriteLine($"{product.Name} {product.CategoryId}");
 
             Console.WriteLine(p.FirstName);
             Console.WriteLine(newp.FirstName);
