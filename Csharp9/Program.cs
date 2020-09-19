@@ -19,17 +19,21 @@ namespace Csharp9
             Console.WriteLine(p.FirstName);
             Console.WriteLine(newp.FirstName);
 
-            
+
 
             #region Product
 
-            //var product = new Product("Phone", 14);
-            //Console.WriteLine($"{product.Name} {product.CategoryId}");
+            var product = new Product("Phone", 14);
+            Console.WriteLine($"{product.Name} {product.CategoryId}");
 
-            //var (name, lastname) = p;
-            //Console.WriteLine($"{name} {lastname}");
+            var pr = new Product("first", 1) { Name = "second", CategoryId = 2 };
+            //pr.LastName = "gege";
+            Console.WriteLine(pr.Name + " " + pr.CategoryId);
 
-            //Product pr2 = new("3", 5);
+            var (name, lastname) = p;
+            Console.WriteLine($"{name} {lastname}");
+
+            Product pr2 = new("3", 5);
 
             #endregion
 
@@ -50,7 +54,7 @@ namespace Csharp9
 
     public record Product(string Name, int CategoryId);
 
-    //#region Next 
+    //#region Next Feature in progress
 
     //// Before
     //void Insert(string s)
