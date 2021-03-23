@@ -26,7 +26,7 @@ namespace Csharp9
 
             Console.WriteLine(p.FirstName);
             Console.WriteLine(newp.FirstName);
-           
+
 
             //var dummy = new Dummy()
             //{
@@ -37,7 +37,7 @@ namespace Csharp9
             #region Product
             // Target-typed new expressions
             Product product = new("Parfume", 33);
-            Console.WriteLine($"{product.Name} {product.CategoryId}");
+            Console.WriteLine(product);
 
             // ctor and obj-initializer
             var pr = new Product("first", 1)
