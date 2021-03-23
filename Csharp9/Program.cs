@@ -6,17 +6,17 @@ namespace Csharp9
     {
         static void Main(string[] args)
         {
-            var p = new Person()
+            var person = new Person()
             {
                 FirstName = "guven",
                 LastName = "kurt"
             };
 
-            var newp = p with { };
-            newp.FirstName = "changed";
+            var anotherPerson = person with { };
+            anotherPerson.FirstName = "changed";
             //newp.LastName = "last";
 
-            if (p is not null)
+            if (person is not null)
                 Console.WriteLine("not null");
 
             // another way of is not null
@@ -24,8 +24,8 @@ namespace Csharp9
             //if (str is object)
             //    Console.WriteLine("string is not null");
 
-            Console.WriteLine(p.FirstName);
-            Console.WriteLine(newp.FirstName);
+            Console.WriteLine(person.FirstName);
+            Console.WriteLine(anotherPerson.FirstName);
 
 
             //var dummy = new Dummy()
@@ -50,7 +50,7 @@ namespace Csharp9
 
 
             // deconstructor
-            var (name, lastname) = p;
+            var (name, lastname) = person;
             Console.WriteLine($"{name} {lastname}");
 
             Product pr2 = new("3", 5);
