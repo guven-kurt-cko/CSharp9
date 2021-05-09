@@ -48,6 +48,12 @@ namespace Csharp9
             //pr.LastName = "gege";
             Console.WriteLine(pr.Name + " " + pr.CategoryId);
 
+            var tt = new GvnStruct
+            {
+                Name = "ggg",
+                Age = 31
+            };
+            Console.WriteLine(tt.Name + " " + tt.Age);
 
             // deconstructor
             var (name, lastname) = person;
@@ -55,10 +61,23 @@ namespace Csharp9
 
             Product pr2 = new("3", 5);
 
+            var dummy1 = new Product("Gvn", 1);
+            var dummy21 = new Product("Gvn", 1);
+
+            if (dummy1 == dummy21)
+            {
+                Console.WriteLine("Equals");
+            }
             #endregion
 
             Console.ReadKey();
         }
+    }
+
+    public struct GvnStruct
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
     }
 
     public class Dummy
