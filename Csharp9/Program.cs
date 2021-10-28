@@ -12,17 +12,12 @@ namespace Csharp9
                 LastName = "kurt"
             };
 
-            var anotherPerson = person with { };
+            var anotherPerson = person with {  };
             anotherPerson.FirstName = "changed";
             //newp.LastName = "last";
 
             if (person is not null)
                 Console.WriteLine("not null");
-
-            // another way of is not null
-            //string str = "g";
-            //if (str is object)
-            //    Console.WriteLine("string is not null");
 
             Console.WriteLine(person.FirstName);
             Console.WriteLine(anotherPerson.FirstName);
@@ -61,6 +56,9 @@ namespace Csharp9
 
             Product pr2 = new("3", 5);
 
+            var (namePr2, lastnamePr2) = pr2;
+            Console.WriteLine($"{namePr2} {lastnamePr2}");
+
             var dummy1 = new Product("Gvn", 1);
             var dummy21 = new Product("Gvn", 1);
 
@@ -93,6 +91,7 @@ namespace Csharp9
             LastName = lastName;
         }
     }
+    public record Product(string Name, int CategoryId);
 
     public record Person
     {
@@ -104,26 +103,4 @@ namespace Csharp9
             (firstName, lastName) = (FirstName, LastName);
         }
     }
-
-    public record Product(string Name, int CategoryId);
-
-    //#region Next Feature in progress
-
-    //// Before
-    //void Insert(string s)
-    //{
-    //    if (s is null)
-    //        throw new ArgumentNullException(nameof(s));
-
-    //}
-
-    //// After
-    //void Insert(string s!)
-    //{
-
-    //}
-
-    //const string s1 = $"abc";
-
-    //#endregion
 }
