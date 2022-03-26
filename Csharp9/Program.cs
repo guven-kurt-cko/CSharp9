@@ -6,101 +6,69 @@ namespace Csharp9
     {
         static void Main(string[] args)
         {
-            var person = new Person()
+            var person1 = new Person()
             {
-                FirstName = "guven",
-                LastName = "kurt"
+                FirstName = "Joe",
+                LastName = "White"
             };
+            //person1.FirstName = "first";
+            //person1.LastName = "last";
 
-            var anotherPerson = person with {  };
-            anotherPerson.FirstName = "changed";
-            //newp.LastName = "last";
-
-            if (person is not null)
+            if (person1 is not null)
                 Console.WriteLine("not null");
 
-            Console.WriteLine(person.FirstName);
-            Console.WriteLine(anotherPerson.FirstName);
+            // deconstructor
+            //var (name, lastname) = person1;
+            //Console.WriteLine($"{name} {lastname}");
 
+            // With-expressions
+            var person2 = person1 with { FirstName = "Robert" };
 
-            //var dummy = new Dummy()
-            //{
-            //    FirstName = "Test"
-            //};
-
+            // auto ToString() method
+            Console.WriteLine(person2);
 
             #region Product
             // Target-typed new expressions
-            Product product = new("Parfume", 33);
-            Console.WriteLine(product);
+            Product product1 = new("Parfume", 33);
+            Console.WriteLine(product1);
 
             // ctor and obj-initializer
-            var pr = new Product("first", 1)
+            var product2 = new Product("first", 1)
             {
                 Name = "second",
-                CategoryId = 2
+                Count = 2
             };
-            //pr.LastName = "gege";
-            Console.WriteLine(pr.Name + " " + pr.CategoryId);
+            //product1.Name = "test";
+            //product1.Count = 5;
 
-            var tt = new GvnStruct
-            {
-                Name = "ggg",
-                Age = 31
-            };
-            Console.WriteLine(tt.Name + " " + tt.Age);
+            Console.WriteLine(product2);
 
-            // deconstructor
-            var (name, lastname) = person;
-            Console.WriteLine($"{name} {lastname}");
+            var (name, categoryId) = product2;
+            Console.WriteLine($"{name} {categoryId}");
 
-            Product pr2 = new("3", 5);
+            var test1 = new Product("shelf", 2);
+            var test2 = new Product("shelf", 2);
 
-            var (namePr2, lastnamePr2) = pr2;
-            Console.WriteLine($"{namePr2} {lastnamePr2}");
-
-            var dummy1 = new Product("Gvn", 1);
-            var dummy21 = new Product("Gvn", 1);
-
-            if (dummy1 == dummy21)
+            if (test1 == test2)
             {
                 Console.WriteLine("Equals");
             }
             #endregion
 
+            //#error version
+
             Console.ReadKey();
         }
+
+        //public static bool IsLetterOrSeparator2(char c)
+        //{
+        //    return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == '.' || c == ',';
+        //}
+        // pattern matching, works only with constant values
+        //public static bool IsLetterOrSeparator1(char c)
+        //{
+        //    return c is (>= 'a' and <= 'z') or (>= 'A' and <= 'Z') or '.' or ',';
+        //}
     }
 
-    public struct GvnStruct
-    {
-        public string Name { get; set; }
-        public int Age { get; set; }
-    }
-
-    public class Dummy
-    {
-        public Dummy() { }
-
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-
-        public Dummy(string firstName, string lastName)
-        {
-            FirstName = firstName;
-            LastName = lastName;
-        }
-    }
-    public record Product(string Name, int CategoryId);
-
-    public record Person
-    {
-        public string FirstName { get; set; }
-        public string LastName { get; init; }
-
-        public void Deconstruct(out string firstName, out string lastName)
-        {
-            (firstName, lastName) = (FirstName, LastName);
-        }
-    }
 }
